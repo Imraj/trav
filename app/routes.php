@@ -243,13 +243,13 @@ Route::post('/register',function(){
 		//Send Email To User
 
 		//Activate your trav account
-		Mail::send("emails.activate",array("fullName"=>Input::get("fullName"),function($message){
+		/*Mail::send("emails.activate",array("fullName"=>Input::get("fullName"),function($message){
 			$message->to(Input::get("emailAddress"),Input::get("fullName"))->subject("Activate Your Trav Account");
 		}));
 		//Welcome To Trav Email Address
 		Mail::send("emails.registration",array("fullName"=>Input::get("fullName"),function($message){
 			$message->to(Input::get("emailAddress"),Input::get("fullName"))->subject("Welcome To Trav");
-		}));
+		}));*/
 		//
 		return Redirect::to("/register")->withSuccess("User Successfully Registered , Login to your account");
 	}
